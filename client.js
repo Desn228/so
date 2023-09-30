@@ -1,3 +1,8 @@
+// разрешаем вход в команды по запросу
+Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);});
+// спавн по входу в команду
+Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
+
 
 // создаем команды
 Teams.Add("Special Forces "{ f: 1 });
